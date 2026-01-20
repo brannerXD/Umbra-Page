@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbra TV - Registrarse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <section class="hero">
+        <div class="container hero-content text-center py-5">
+            <h1 class="display-4 fw-bold mb-4">Crea tu cuenta en Umbra TV</h1>
+            <p class="lead mb-5">Accede a mundos ocultos. Solo unos pasos.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <form id="registerForm" class="p-4 p-md-5 register-form">
+                        <div class="mb-4">
+                            <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" id="password" class="form-control form-control-lg" placeholder="Contraseña" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" id="confirmPassword" class="form-control form-control-lg" placeholder="Confirmar contraseña" required>
+                        </div>
+
+                        <!-- Mensaje de error -->
+                        <div id="errorMessage" class="text-danger mb-4 fw-bold d-none"></div>
+
+                        <button type="submit" class="btn btn-purple btn-lg w-100 fw-bold">Registrarse</button>
+
+                        <p class="mt-4 text-muted">
+                            ¿Ya tienes cuenta? <a href="login.html" class="text-neon">Iniciar sesión</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts/register.js"></script>
+</body>
+</html>

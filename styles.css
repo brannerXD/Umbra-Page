@@ -1,0 +1,152 @@
+body {
+    background-color: #000;
+    color: #e0e0e0;
+    font-family: 'Orbitron', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,20,0.95)),
+        url('https://cdn.wallpapersafari.com/36/62/AVTFif.jpg') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 255, 0.05) 2px, rgba(0, 255, 255, 0.05) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 255, 255, 0.05) 2px, rgba(0, 255, 255, 0.05) 4px);
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.text-purple { 
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+h1, h2, h5 {
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+.btn-purple {
+    background-color: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+.btn-purple:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 30px #00ffff;
+    transform: scale(1.05);
+}
+
+.btn-outline-purple {
+    border: 2px solid #ff00ff;
+    color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.btn-outline-purple:hover {
+    background-color: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 30px #ff00ff;
+}
+
+.preview-card {
+    background-color: rgba(10, 10, 30, 0.6);
+    border: 1px solid #00ffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.preview-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    border-color: #ff00ff;
+}
+
+.placeholder-img {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.movie-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.preview-card:hover .movie-img {
+    transform: scale(1.1);
+}
+
+.preview-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, transparent 48%, rgba(57, 255, 20, 0.1) 50%, transparent 52%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.preview-card:hover::after {
+    opacity: 1;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+}
+
+.preview-section {
+    background-color: #000;
+}
+
+.register-form {
+    background-color: rgba(10, 10, 30, 0.7);
+    border: 1px solid #00ffff;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00ffff;
+    color: #e0e0e0;
+}
+
+.form-control:focus {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+.text-neon {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
